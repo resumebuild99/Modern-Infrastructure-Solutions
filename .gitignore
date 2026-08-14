@@ -1,1 +1,83 @@
+# ============================================================
+# Modern Infrastructure Solutions
+# Repository Git Ignore Standard
+# ============================================================
+
+# ------------------------------------------------------------
+# Terraform
+# ------------------------------------------------------------
+
+# Terraform working directory
 .terraform/
+
+# Terraform state
+*.tfstate
+*.tfstate.*
+
+# Terraform saved plans
+*.tfplan
+
+# Terraform crash logs
+crash.log
+crash.*.log
+
+# Terraform variable files
+*.tfvars
+*.tfvars.json
+
+# Terraform override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+
+# ------------------------------------------------------------
+# Python
+# ------------------------------------------------------------
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Python environment/config files
+.env
+.env.*
+
+.pytest_cache/
+.mypy_cache/
+
+
+# ------------------------------------------------------------
+# Secrets and Credentials
+# ------------------------------------------------------------
+
+credentials
+credentials.*
+secrets/
+
+*.pem
+*.key
+*.pfx
+*.p12
+
+
+# ------------------------------------------------------------
+# Operating System
+# ------------------------------------------------------------
+
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+
+# ------------------------------------------------------------
+# Temporary Files
+# ------------------------------------------------------------
+
+*.tmp
+*.temp
+*.bak
+

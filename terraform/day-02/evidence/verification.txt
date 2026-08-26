@@ -1,0 +1,39 @@
+﻿DAY 02 — TERRAFORM VERIFICATION
+
+Terraform resources in state:
+aws_vpc.main
+aws_subnet.public
+aws_internet_gateway.main
+aws_route_table.public
+aws_route_table_association.public
+
+VPC
+ID        = vpc-0612971b7378d6826
+CIDR      = 10.10.0.0/16
+Region    = ap-southeast-2
+Name      = day-02-vpc
+ManagedBy = Terraform
+Environment = Lab
+
+PUBLIC SUBNET
+ID        = subnet-04c2f8435b7b88571
+CIDR      = 10.10.1.0/24
+AZ        = ap-southeast-2a
+VPC       = vpc-0612971b7378d6826
+Name      = day-02-public-subnet
+ManagedBy = Terraform
+Environment = Lab
+
+INTERNET GATEWAY
+ID        = igw-0101540f2178dc102
+VPC       = vpc-0612971b7378d6826
+
+PUBLIC ROUTE TABLE
+ID        = rtb-0025a3fc405bdf5e7
+VPC       = vpc-0612971b7378d6826
+DEFAULT ROUTE = 0.0.0.0/0 -> igw-0101540f2178dc102
+
+ROUTE TABLE ASSOCIATION
+ID        = rtbassoc-0d38f625207d158f8
+SUBNET   = subnet-04c2f8435b7b88571
+ROUTE TABLE = rtb-0025a3fc405bdf5e7

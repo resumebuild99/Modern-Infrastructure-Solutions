@@ -1,0 +1,54 @@
+﻿----------------------------------------------------------------------
+|                            DescribeVpcs                            |
++--------------+-------------+------------+--------------------------+
+|     CIDR     |    Name     |   State    |          VpcId           |
++--------------+-------------+------------+--------------------------+
+|  10.10.0.0/16|  day-02-vpc |  available |  vpc-0612971b7378d6826   |
++--------------+-------------+------------+--------------------------+
+------------------------------------------
+|             DescribeSubnets            |
++-----------+----------------------------+
+|  AZ       |  ap-southeast-2a           |
+|  CIDR     |  10.10.1.0/24              |
+|  Name     |  day-02-public-subnet      |
+|  SubnetId |  subnet-04c2f8435b7b88571  |
+|  VpcId    |  vpc-0612971b7378d6826     |
++-----------+----------------------------+
+-----------------------------------------------------------------
+|                   DescribeInternetGateways                    |
++------------------------+------------+-------------------------+
+|           IGW          |   State    |          VpcId          |
++------------------------+------------+-------------------------+
+|  igw-0101540f2178dc102 |  available |  vpc-0612971b7378d6826  |
++------------------------+------------+-------------------------+
+[
+    {
+        "RouteTableId": "rtb-0025a3fc405bdf5e7",
+        "VpcId": "vpc-0612971b7378d6826",
+        "Routes": [
+            {
+                "DestinationCidrBlock": "10.10.0.0/16",
+                "GatewayId": "local",
+                "Origin": "CreateRouteTable",
+                "State": "active"
+            },
+            {
+                "DestinationCidrBlock": "0.0.0.0/0",
+                "GatewayId": "igw-0101540f2178dc102",
+                "Origin": "CreateRoute",
+                "State": "active"
+            }
+        ],
+        "Associations": [
+            {
+                "Main": false,
+                "RouteTableAssociationId": "rtbassoc-0d38f625207d158f8",
+                "RouteTableId": "rtb-0025a3fc405bdf5e7",
+                "SubnetId": "subnet-04c2f8435b7b88571",
+                "AssociationState": {
+                    "State": "associated"
+                }
+            }
+        ]
+    }
+]

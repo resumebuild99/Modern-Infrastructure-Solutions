@@ -1,0 +1,5 @@
+﻿{
+    "BucketArn": "arn:aws:s3:::modern-infrastructure-terraform-test-2026",
+    "BucketRegion": "ap-southeast-2",
+    "AccessPointAlias": false
+}

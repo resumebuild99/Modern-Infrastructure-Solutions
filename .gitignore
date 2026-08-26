@@ -81,3 +81,6 @@ Desktop.ini
 *.temp
 *.bak
 
+
+# Local raw lab evidence
+terraform/day-01/evidence/verification-raw-local.txt

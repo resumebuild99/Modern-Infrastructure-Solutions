@@ -1,4 +1,4 @@
-# ============================================================
+﻿# ============================================================
 # Modern Infrastructure Solutions
 # Repository Git Ignore Standard
 # ============================================================
@@ -83,4 +83,5 @@ Desktop.ini
 
 
 # Local raw lab evidence
-terraform/day-01/evidence/verification-raw-local.txt
+terraform/*/evidence/verification-raw-local.txt
+

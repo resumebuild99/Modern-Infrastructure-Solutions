@@ -1,0 +1,33 @@
+LAB 3A — POST-DESTROY VERIFICATION
+=====================================
+
+Terraform state
+---------------
+Result: EMPTY
+Outcome: PASS — Terraform no longer manages Lab 3A resources.
+
+AWS verification
+----------------
+EC2       : terminated
+VPC       : not found
+Subnet    : not found
+IGW       : not found
+Route tbl : not found
+Security Group : not found
+IAM role  : not found
+IAM profile : not found
+
+EBS attachment check
+--------------------
+Result: No attached EBS volumes returned.
+Outcome: PASS
+
+Final outcome
+-------------
+PASS — Lab 3A temporary infrastructure was removed and the expected
+post-destroy checks confirmed that the managed resources are gone.
+
+Evidence note
+-------------
+Provider-generated IDs and account-specific identifiers are intentionally
+omitted from the public evidence copy.

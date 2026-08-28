@@ -1,0 +1,21 @@
+LAB 3A — DESTROY EVIDENCE
+==========================
+
+Cleanup action
+--------------
+The reviewed Terraform destroy plan was applied to the Lab 3A stack.
+
+Terraform result
+----------------
+Resources added   : 0
+Resources changed : 0
+Resources destroyed: 10
+
+Outcome
+-------
+PASS — The temporary Lab 3A infrastructure was destroyed successfully.
+
+Scope
+-----
+Only the resources managed by the secure-aws-compute Terraform state
+were targeted.

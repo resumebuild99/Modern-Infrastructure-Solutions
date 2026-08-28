@@ -1,0 +1,45 @@
+LAB 3A — FUNCTIONAL TEST EVIDENCE
+====================================
+
+Objective
+---------
+Verify that the EC2 workload can be managed through AWS Systems Manager
+without exposing inbound SSH.
+
+Environment
+-----------
+AWS region : ap-southeast-2
+Management : AWS Systems Manager
+
+Security check
+--------------
+Security Group inbound rules : NONE
+SSH exposed to Internet       : NO
+
+SSM registration test
+---------------------
+PingStatus   : Online
+Platform     : Amazon Linux 2023
+ResourceType : EC2Instance
+
+Run Command test
+----------------
+Document : AWS-RunShellScript
+Command  : hostname
+
+Result
+------
+Status       : Success
+ResponseCode : 0
+StandardError: EMPTY
+Output       : hostname returned successfully
+
+Outcome
+-------
+PASS — Systems Manager successfully executed a remote command on the
+Terraform-provisioned EC2 instance without requiring inbound SSH.
+
+Evidence note
+-------------
+Command IDs, instance IDs, IP addresses and account-specific identifiers
+are intentionally omitted from the public evidence copy.

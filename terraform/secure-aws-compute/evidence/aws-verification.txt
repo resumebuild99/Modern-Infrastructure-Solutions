@@ -1,0 +1,57 @@
+LAB 3A — AWS CLI VERIFICATION
+===============================
+
+Environment
+-----------
+AWS region : ap-southeast-2
+
+VPC
+---
+Name   : lab3a-secure-compute-vpc
+CIDR   : 10.30.0.0/16
+State  : available (at verification time)
+
+Subnet
+------
+Name             : lab3a-public-subnet
+CIDR             : 10.30.1.0/24
+AZ               : ap-southeast-2a
+Public IP launch : enabled
+
+Internet Gateway
+----------------
+Name/Tag : lab3a-igw
+Attachment : Lab 3A VPC
+
+Route Table
+-----------
+Name : lab3a-public-rt
+Route : 0.0.0.0/0 -> Internet Gateway
+Local route : VPC CIDR -> local
+
+Security Group
+--------------
+Name   : lab3a-ec2-sg
+Ingress: NONE
+Egress : TCP/443 -> 0.0.0.0/0
+
+EC2
+---
+Name         : lab3a-secure-compute
+Type         : t3.micro
+State        : running (at verification time)
+Subnet       : lab3a-public-subnet
+VPC          : lab3a-secure-compute-vpc
+IAM profile  : lab3a-ec2-ssm-profile
+Security SG  : lab3a-ec2-sg
+
+IAM
+---
+Role                  : lab3a-ec2-ssm-role
+Attached policy       : AmazonSSMManagedInstanceCore
+Instance profile role : lab3a-ec2-ssm-role
+
+Evidence note
+-------------
+Provider-generated IDs, AWS account identifiers, IP addresses and ARNs
+are intentionally omitted from the public evidence copy.

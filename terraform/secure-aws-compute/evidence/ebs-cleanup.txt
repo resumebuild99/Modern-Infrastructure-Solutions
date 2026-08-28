@@ -1,0 +1,11 @@
+﻿LAB 3A — EBS CLEANUP VERIFICATION
+
+Test:
+Checked for EBS volumes still attached to EC2 instance
+i-0a5f6ef74c40c2e54.
+
+Command result:
+No attached EBS volumes returned.
+
+Outcome:
+PASS — No EBS volume remains attached to the destroyed Lab 3A instance.

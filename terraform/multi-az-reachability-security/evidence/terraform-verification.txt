@@ -1,0 +1,16 @@
+﻿data.aws_ami.amazon_linux
+data.aws_availability_zones.available
+aws_iam_instance_profile.ssm
+aws_iam_role.ssm
+aws_iam_role_policy_attachment.ssm
+aws_instance.a
+aws_instance.b
+aws_internet_gateway.main
+aws_route_table.public
+aws_route_table_association.a
+aws_route_table_association.b
+aws_security_group.a
+aws_security_group.b
+aws_subnet.a
+aws_subnet.b
+aws_vpc.main

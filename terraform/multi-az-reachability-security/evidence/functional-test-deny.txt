@@ -1,0 +1,19 @@
+﻿LAB 3B FUNCTIONAL TEST — TCP/22 DENY
+
+Source:
+EC2-A / Subnet A / 10.40.10.0/24
+
+Destination:
+EC2-B / Subnet B / 10.40.20.0/24
+
+Test:
+TCP/22
+
+Result:
+BLOCKED
+
+Ncat:
+TIMEOUT.
+
+Conclusion:
+Traffic from EC2-A to EC2-B on TCP/22 is blocked by the implemented Security Group policy.

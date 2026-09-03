@@ -1,0 +1,15 @@
+﻿LAB 3B — SSM VERIFICATION
+
+EC2-A
+  Platform: Amazon Linux
+  SSM Agent: 3.3.5226.0
+  PingStatus: Online
+
+EC2-B
+  Platform: Amazon Linux
+  SSM Agent: 3.3.5226.0
+  PingStatus: Online
+
+Management model:
+  AWS Systems Manager
+  No inbound SSH required

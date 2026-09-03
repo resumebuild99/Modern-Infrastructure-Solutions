@@ -1,0 +1,15 @@
+﻿LAB 3B — AWS INSTANCE VERIFICATION
+
+EC2-A
+  State: running
+  Availability Zone: ap-southeast-2a
+  Private IP: 10.40.10.x
+  Subnet: Subnet A (10.40.10.0/24)
+  Security Group: SG-A
+
+EC2-B
+  State: running
+  Availability Zone: ap-southeast-2b
+  Private IP: 10.40.20.x
+  Subnet: Subnet B (10.40.20.0/24)
+  Security Group: SG-B

@@ -1,0 +1,27 @@
+﻿LAB 3B — TERRAFORM OUTPUTS (SANITIZED)
+
+IAM Role:
+  lab3b-ec2-ssm-role
+
+VPC:
+  10.40.0.0/16
+
+Subnet A:
+  10.40.10.0/24
+  AZ: ap-southeast-2a
+
+Subnet B:
+  10.40.20.0/24
+  AZ: ap-southeast-2b
+
+EC2-A:
+  Logical Name: lab3b-ec2-a
+  Private IP: 10.40.10.x
+
+EC2-B:
+  Logical Name: lab3b-ec2-b
+  Private IP: 10.40.20.x
+
+Security Groups:
+  SG-A
+  SG-B

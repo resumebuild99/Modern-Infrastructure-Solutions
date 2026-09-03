@@ -1,0 +1,19 @@
+﻿LAB 3B FUNCTIONAL TEST — TCP/80 ALLOW
+
+Source:
+EC2-A / Subnet A / 10.40.10.0/24
+
+Destination:
+EC2-B / Subnet B / 10.40.20.0/24
+
+Test:
+TCP/80
+
+Result:
+SUCCESS
+
+Ncat:
+Connected to destination TCP/80.
+
+Conclusion:
+Traffic from EC2-A to EC2-B on TCP/80 is permitted by the implemented Security Group policy.

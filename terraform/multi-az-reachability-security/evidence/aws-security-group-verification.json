@@ -1,0 +1,43 @@
+﻿{
+  "Lab": "3B - Multi-AZ Reachability & Security",
+  "SecurityGroups": [
+    {
+      "Name": "SG-A",
+      "Inbound": [],
+      "Outbound": [
+        {
+          "Protocol": "TCP",
+          "Port": 80,
+          "Destination": "10.40.20.0/24",
+          "Purpose": "Allow HTTP to EC2-B subnet"
+        },
+        {
+          "Protocol": "TCP",
+          "Port": 443,
+          "Destination": "0.0.0.0/0",
+          "Purpose": "Allow HTTPS to AWS/services"
+        }
+      ]
+    },
+    {
+      "Name": "SG-B",
+      "Inbound": [
+        {
+          "Protocol": "TCP",
+          "Port": 80,
+          "Source": "SG-A",
+          "Purpose": "Allow HTTP from EC2-A"
+        }
+      ],
+      "Outbound": [
+        {
+          "Protocol": "TCP",
+          "Port": 443,
+          "Destination": "0.0.0.0/0",
+          "Purpose": "Allow HTTPS to AWS/services"
+        }
+      ]
+    }
+  ],
+  "TCP22Inbound": "Not permitted"
+}
